@@ -26,7 +26,7 @@
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{
   margin:0;
   font-family:var(--font-body);
@@ -35,6 +35,7 @@ body{
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
+  max-width:100%;
 }
 h1,h2,h3,h4{font-family:var(--font-display);line-height:1.1;margin:0 0 .4em;font-weight:700;color:var(--ink-blue)}
 h1{font-size:clamp(2.3rem,5.4vw,4rem);letter-spacing:-.5px}
@@ -131,7 +132,8 @@ img{max-width:100%;display:block}
   padding:.9rem 1.1rem;box-shadow:var(--shadow);display:flex;align-items:center;gap:.7rem;
   transform:rotate(-2deg);animation:floaty 5s ease-in-out infinite}
 .hero-badge .dot{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--lime));
-  display:grid;place-items:center;color:#fff;font-size:1.4rem;flex:0 0 auto}
+  display:grid;place-items:center;color:#fff;flex:0 0 auto}
+.hero-badge .dot svg{width:22px;height:22px}
 .hero-badge b{font-family:var(--font-display);color:var(--ink-blue);display:block;font-size:1.05rem;line-height:1.1}
 .hero-badge small{color:var(--charcoal-soft);font-weight:700}
 @keyframes floaty{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-9px)}}
@@ -160,7 +162,8 @@ img{max-width:100%;display:block}
   background:linear-gradient(90deg,var(--sky),var(--green))}
 .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .card .ico{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;margin-bottom:1rem;
-  background:linear-gradient(135deg,rgba(63,169,217,.14),rgba(139,214,74,.16));font-size:1.6rem}
+  background:linear-gradient(135deg,rgba(63,169,217,.14),rgba(139,214,74,.16));color:var(--sky-deep)}
+.card .ico svg{width:28px;height:28px}
 .card h3{margin-bottom:.4rem}
 .card p{color:var(--charcoal-soft);margin-bottom:0;font-size:.97rem}
 
@@ -261,7 +264,8 @@ img{max-width:100%;display:block}
 .form-ok.show{display:flex}
 .chip-row{display:flex;gap:.6rem;flex-wrap:wrap}
 .chip{flex:1;min-width:90px}
-.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;clip:rect(0 0 0 0);overflow:hidden;left:0;top:0}
+.chip{position:relative}
 .chip label{display:block;text-align:center;padding:.7rem .5rem;border:1.5px solid var(--line);border-radius:12px;
   background:var(--foam);cursor:pointer;font-weight:700;font-size:.92rem;color:var(--charcoal-soft);transition:.2s;margin:0}
 .chip input:checked + label{border-color:var(--green);background:linear-gradient(135deg,rgba(91,176,46,.12),rgba(139,214,74,.16));
@@ -271,8 +275,9 @@ img{max-width:100%;display:block}
 .info-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem}
 .info-tile{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;
   box-shadow:var(--shadow-sm);display:flex;gap:1rem;align-items:flex-start}
-.info-tile .ti{width:46px;height:46px;border-radius:13px;flex:0 0 auto;display:grid;place-items:center;font-size:1.3rem;
+.info-tile .ti{width:46px;height:46px;border-radius:13px;flex:0 0 auto;display:grid;place-items:center;color:var(--sky-deep);
   background:linear-gradient(135deg,rgba(63,169,217,.14),rgba(139,214,74,.16))}
+.info-tile .ti svg{width:24px;height:24px}
 .info-tile b{display:block;color:var(--ink-blue);font-family:var(--font-display);margin-bottom:.15rem}
 .info-tile a,.info-tile span{color:var(--charcoal-soft);font-weight:600}
 
@@ -282,7 +287,14 @@ img{max-width:100%;display:block}
   linear-gradient(180deg,var(--foam),var(--white));padding:clamp(2.6rem,6vw,4.6rem) 0}
 .value-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.3rem;margin-top:2rem}
 .value{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow-sm)}
-.value .ico{font-size:1.7rem;margin-bottom:.6rem}
+.value .ico{margin-bottom:.6rem;color:var(--sky-deep)}
+.value .ico svg{width:30px;height:30px}
+/* inline icon helper (footer links, buttons, badges) */
+.ic{display:inline-flex;vertical-align:middle;line-height:0}
+.ic svg{width:1.1em;height:1.1em}
+.btn .ic svg{width:1.05em;height:1.05em}
+.site-foot a .ic{margin-right:.45rem;color:var(--lime)}
+.hero-cta .ic{color:currentColor}
 .value h3{font-size:1.1rem}
 .value p{font-size:.95rem;color:var(--charcoal-soft);margin:0}
 
@@ -331,7 +343,7 @@ img{max-width:100%;display:block}
   .split .split-media{order:-1}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
-@media (max-width:680px){
+@media (max-width:860px){
   .nav-links{position:fixed;inset:74px 0 auto 0;background:#fff;flex-direction:column;gap:0;
     padding:1rem 0;border-bottom:1px solid var(--line);box-shadow:var(--shadow);
     transform:translateY(-130%);transition:transform .3s ease;align-items:stretch}
@@ -339,6 +351,8 @@ img{max-width:100%;display:block}
   .nav-links li{text-align:center;padding:.4rem 0}
   .nav-links .nav-cta{margin:.6rem auto 0}
   .burger{display:flex}
+}
+@media (max-width:680px){
   .grid-2{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr}
   .hero-trust{gap:1.1rem}
