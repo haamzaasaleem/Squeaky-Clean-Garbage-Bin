@@ -197,6 +197,40 @@ p{margin:0 0 1rem}
 .phead h1{color:var(--green-ink)}
 .phead p{font-size:1.15rem;color:var(--body);max-width:42rem;margin-top:.8rem}
 
+/* ---------- impact cards ---------- */
+.impact{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.impact-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:1.8rem;text-align:left}
+.impact-card .ic{width:48px;height:48px;border-radius:11px;background:var(--green-50);display:grid;place-items:center;color:var(--green);margin-bottom:1.1rem}
+.impact-card .ic svg{width:24px;height:24px}
+.impact-card:last-child .ic{background:var(--green);color:#fff}
+.impact-card b{font-family:var(--disp);color:var(--green-ink);font-size:1.1rem;display:block;margin-bottom:.4rem}
+.impact-card p{margin:0;font-size:.95rem;color:var(--body)}
+
+/* ---------- homepage quote section ---------- */
+.quote-sec{background:var(--green-50);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+.quote-intro{position:sticky;top:96px}
+.quote-intro .check-list li a{color:var(--green);font-weight:600}
+
+/* ---------- contact page ---------- */
+.contact-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.cm{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:2rem;transition:.2s}
+.cm:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:var(--green-100)}
+.cm .ic{width:52px;height:52px;border-radius:12px;background:var(--green-50);display:grid;place-items:center;color:var(--green);margin-bottom:1.2rem}
+.cm .ic svg{width:26px;height:26px}
+.cm b{font-family:var(--disp);color:var(--green-ink);font-size:1.15rem;display:block;margin-bottom:.2rem}
+.cm span{display:block;color:var(--ink);font-weight:600}
+.cm small{color:var(--muted);font-weight:500;font-size:.88rem}
+.contact-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,3.5rem);align-items:start}
+.info-rows{display:flex;flex-direction:column;gap:1.4rem;margin-top:1.4rem}
+.ir{display:flex;gap:1rem;align-items:flex-start}
+.ir .ic{width:46px;height:46px;flex:0 0 auto;border-radius:11px;background:var(--green-50);display:grid;place-items:center;color:var(--green)}
+.ir .ic svg{width:23px;height:23px}
+.ir b{font-family:var(--disp);color:var(--green-ink);display:block;margin-bottom:.2rem}
+.ir span{color:var(--body);font-size:.97rem;line-height:1.6}
+.map-wrap{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);height:100%;min-height:360px}
+.map-wrap iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+
 /* ---------- before/after ---------- */
 .ba{position:relative;max-width:660px;margin:0 auto;border-radius:var(--r-lg);overflow:hidden;
   box-shadow:var(--shadow-md);border:1px solid var(--line);aspect-ratio:16/10;user-select:none;cursor:ew-resize}
@@ -281,6 +315,11 @@ p{margin:0 0 1rem}
   .stats4{grid-template-columns:1fr 1fr}
   .vals{grid-template-columns:1fr}
   .foot-top{grid-template-columns:1fr 1fr}
+  .impact{grid-template-columns:1fr 1fr}
+  .quote-grid{grid-template-columns:1fr;gap:2rem}
+  .quote-intro{position:static}
+  .contact-methods{grid-template-columns:1fr}
+  .contact-info-grid{grid-template-columns:1fr;gap:2rem}
 }
 @media(max-width:760px){
   .nav,.top-phone{display:none}
@@ -295,5 +334,6 @@ p{margin:0 0 1rem}
   .stats4{grid-template-columns:1fr 1fr}
   .foot-top{grid-template-columns:1fr}
   .row2{grid-template-columns:1fr}
+  .impact{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
