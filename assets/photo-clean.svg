@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#4e7d2e"/><stop offset="1" stop-color="#2a4718"/></linearGradient></defs>
+<rect width="800" height="600" fill="url(#g)"/>
+<g opacity="0.5" fill="none" stroke="#ffffff" stroke-width="2">
+<rect x="300" y="230" width="200" height="240" rx="14"/>
+<path d="M300 270 h200 M340 230 v-26 h120 v26"/>
+<path d="M350 300 v140 M400 300 v140 M450 300 v140"/></g>
+<text x="400" y="540" font-family="Inter,sans-serif" font-size="26" font-weight="600" fill="#ffffff" opacity="0.85" text-anchor="middle">Sanitized & fresh</text>
+</svg>
