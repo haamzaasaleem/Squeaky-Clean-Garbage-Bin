@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dbe9cb"/><stop offset="1" stop-color="#c3dca6"/></linearGradient>
+<linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b7b0a2"/><stop offset="1" stop-color="#9c958699"/></linearGradient>
+</defs>
+<rect width="1400" height="900" fill="url(#sky)"/>
+<rect y="620" width="1400" height="280" fill="#a9a294"/>
+<rect y="620" width="1400" height="60" fill="#b8b2a4"/>
+<!-- row of bins -->
+<g>
+<g transform="translate(820,300)"><rect x="0" y="60" width="150" height="250" rx="14" fill="#4e7d2e"/><rect x="-6" y="40" width="162" height="34" rx="10" fill="#3a5f22"/><path d="M30 80v210M75 80v210M120 80v210" stroke="#3a5f22" stroke-width="6" opacity=".5"/><circle cx="30" cy="320" r="14" fill="#2a2a2a"/><circle cx="120" cy="320" r="14" fill="#2a2a2a"/></g>
+<g transform="translate(1000,290)"><rect x="0" y="60" width="150" height="260" rx="14" fill="#2f6f8b"/><rect x="-6" y="40" width="162" height="34" rx="10" fill="#235463"/><path d="M30 80v220M75 80v220M120 80v220" stroke="#235463" stroke-width="6" opacity=".5"/><circle cx="30" cy="330" r="14" fill="#2a2a2a"/><circle cx="120" cy="330" r="14" fill="#2a2a2a"/></g>
+<g transform="translate(1180,300)"><rect x="0" y="60" width="150" height="250" rx="14" fill="#caa53f"/><rect x="-6" y="40" width="162" height="34" rx="10" fill="#a07f28"/><path d="M30 80v210M75 80v210M120 80v210" stroke="#a07f28" stroke-width="6" opacity=".5"/><circle cx="30" cy="320" r="14" fill="#2a2a2a"/><circle cx="120" cy="320" r="14" fill="#2a2a2a"/></g>
+</g>
+</svg>

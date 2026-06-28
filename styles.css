@@ -72,8 +72,13 @@ p{margin:0 0 1rem}
 .burger.x span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
 
 /* ---------- hero ---------- */
-.hero{background:linear-gradient(180deg,var(--green-50),var(--white));border-bottom:1px solid var(--line)}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;
+.hero{position:relative;border-bottom:1px solid var(--line);background-color:var(--green-50);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;
+  background-image:linear-gradient(100deg,var(--green-50) 0%,rgba(241,246,236,.94) 40%,rgba(42,71,24,.30) 100%),
+    url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1600&q=80'),
+    url('assets/hero-bg.svg');
+  background-size:cover,cover,cover;background-position:center,center right,center;background-repeat:no-repeat}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;
   padding:clamp(3rem,6vw,5.5rem) 28px}
 .hero h1{margin-bottom:1.3rem;color:var(--green-ink)}
 .hero h1 span{color:var(--green)}
