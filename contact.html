@@ -4,107 +4,81 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact & Free Quote | Squeaky Clean Garbage Bin · Fresno, CA</title>
-<meta name="description" content="Get a free quote for garbage bin cleaning and pressure washing in Fresno & Clovis. Call 559-317-5916 or send us your details.">
+<meta name="description" content="Get a free quote for trash bin cleaning & pressure washing in Fresno & Clovis. Call 559-317-5916 or send your details.">
 <link rel="icon" href="assets/mascot.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site-head">
-  <div class="wrap nav">
-    <a class="brand" href="index.html">
-      <img class="brand-logo" src="assets/logo.jpg" alt="Squeaky Clean Garbage Bin — bin cleaning &amp; pressure washing in Fresno">
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-      <li class="nav-cta"><a class="btn btn-primary" href="#quote">Get a Free Quote</a></li>
-    </ul>
-    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html"><img src="assets/logo.jpg" alt="Squeaky Clean Garbage Bin"></a>
+    <nav class="nav" id="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html" class="on">Contact</a></nav>
+    <a class="top-phone" href="tel:5593175916"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h2l1.5 4-2 1.2a11 11 0 0 0 5 5l1.2-2 4 1.5v2a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3Z"/></svg>559-317-5916</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<section class="page-banner">
+<section class="phead">
   <div class="wrap">
-    <div class="crumb"><a href="index.html">Home</a> · Contact</div>
-    <h1>Let's get your bins on the route</h1>
-    <p>Fill out the form for a free quote, or just call — we're real people in Fresno and we actually pick up.</p>
+    <div class="crumb"><a href="index.html">Home</a> / Contact</div>
+    <h1>Get your free quote</h1>
+    <p>Fill out the form or just call — we're real people in Fresno and we actually pick up.</p>
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap split" style="align-items:flex-start">
-    <!-- form -->
-    <div class="reveal" id="quote">
-      <div class="form-card">
-        <h2 style="font-size:1.5rem">Request a free quote</h2>
-        <p style="color:var(--charcoal-soft);font-size:.96rem">Takes about a minute. We'll text or call back within one business day.</p>
-        <form data-fake novalidate>
-          <div class="grid-2">
-            <div class="field"><label for="name">Name *</label><input id="name" name="name" type="text" placeholder="Jane Doe" required></div>
-            <div class="field"><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" placeholder="559-555-1234" required></div>
+<section class="sec">
+  <div class="wrap contact-grid">
+    <div class="fcard rv">
+      <h2 style="font-size:1.7rem;margin-bottom:.3rem">Request a quote</h2>
+      <p style="color:var(--ink-soft);font-weight:600;margin-bottom:1.4rem">Takes a minute. We'll text or call back within one business day.</p>
+      <form data-fake novalidate>
+        <div class="row2">
+          <div class="fld"><label for="name">Name *</label><input id="name" name="name" type="text" placeholder="Jane Doe" required></div>
+          <div class="fld"><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" placeholder="559-555-1234" required></div>
+        </div>
+        <div class="row2">
+          <div class="fld"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@email.com"></div>
+          <div class="fld"><label for="zip">ZIP *</label><input id="zip" name="zip" type="text" placeholder="93704" required></div>
+        </div>
+        <div class="fld">
+          <label>How often?</label>
+          <div class="chips">
+            <span><input type="radio" id="fw" name="freq" value="Weekly"><label for="fw">Weekly</label></span>
+            <span><input type="radio" id="fb" name="freq" value="Bi-weekly" checked><label for="fb">Bi-weekly</label></span>
+            <span><input type="radio" id="fm" name="freq" value="Monthly"><label for="fm">Monthly</label></span>
+            <span><input type="radio" id="fo" name="freq" value="One-time"><label for="fo">One-time</label></span>
           </div>
-          <div class="grid-2">
-            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@email.com"></div>
-            <div class="field"><label for="zip">ZIP code *</label><input id="zip" name="zip" type="text" placeholder="93704" required></div>
-          </div>
-          <div class="field">
-            <label>How often?</label>
-            <div class="chip-row">
-              <span class="chip"><input type="radio" id="f-w" name="freq" value="Weekly"><label for="f-w">Weekly</label></span>
-              <span class="chip"><input type="radio" id="f-b" name="freq" value="Bi-weekly" checked><label for="f-b">Bi-weekly</label></span>
-              <span class="chip"><input type="radio" id="f-m" name="freq" value="Monthly"><label for="f-m">Monthly</label></span>
-              <span class="chip"><input type="radio" id="f-o" name="freq" value="One-time"><label for="f-o">One-time</label></span>
-            </div>
-          </div>
-          <div class="grid-2">
-            <div class="field"><label for="carts">How many carts?</label>
-              <select id="carts" name="carts"><option>1 cart</option><option>2 carts</option><option>3 carts</option><option>4+ carts</option></select></div>
-            <div class="field"><label for="service">Main service</label>
-              <select id="service" name="service"><option>Bin cleaning</option><option>Bin cleaning + pressure washing</option><option>Pressure washing only</option><option>Commercial / HOA</option></select></div>
-          </div>
-          <div class="field"><label for="msg">Anything else?</label><textarea id="msg" name="message" placeholder="Pickup day, gate codes, how bad the cans really are…"></textarea></div>
-          <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Send my request <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.6 4 1.8 5.4 6 6-4.2.6-5.4 2-6 6-.6-4-1.8-5.4-6-6 4.2-.6 5.4-2 6-6Z"/><path d="M19 13c.3 1.6.8 2.2 2.5 2.5-1.7.3-2.2.9-2.5 2.5-.3-1.6-.8-2.2-2.5-2.5 1.7-.3 2.2-.9 2.5-2.5Z"/></svg></span></button>
-          <p class="form-note">By submitting you agree to be contacted about your quote. No spam, ever.</p>
-          <div class="form-ok"><span class="ic" style="color:var(--green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg></span><span class="msg"></span></div>
-        </form>
-      </div>
+        </div>
+        <div class="fld"><label for="msg">Anything else?</label><textarea id="msg" name="message" placeholder="Pickup day, how many cans, how bad they really are…"></textarea></div>
+        <button class="btn btn-green" type="submit" style="width:100%;justify-content:center">Send my request</button>
+        <div class="okmsg"><span>✅</span><span class="t"></span></div>
+      </form>
     </div>
 
-    <!-- info -->
-    <div class="reveal">
-      <span class="eyebrow">Reach us</span>
-      <h2 style="font-size:1.7rem">Prefer to just talk?</h2>
-      <p style="color:var(--charcoal-soft)">Totally fair. Call or text and we'll sort you out fast.</p>
-      <div class="info-tiles" style="grid-template-columns:1fr;margin-top:1.2rem">
-        <div class="info-tile"><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h2l1.5 4-2 1.2a11 11 0 0 0 5 5l1.2-2 4 1.5v2a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3Z"/></svg></div><div><b>Call or text</b><a href="tel:5593175916">559-317-5916</a></div></div>
-        <div class="info-tile"><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></div><div><b>Email</b><a href="mailto:hello@squeakycleanbins.com">hello@squeakycleanbins.com</a></div></div>
-        <div class="info-tile"><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><b>Service area</b><span>Fresno, Clovis &amp; surrounding Central Valley</span></div></div>
-        <div class="info-tile"><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div><div><b>Hours</b><span>Mon–Fri 8a–7p · Sat 10a–4p · Sun closed</span></div></div>
-        <div class="info-tile"><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="M7.5 13h2M11 13h2M14.5 13h2M7.5 16.5h2M11 16.5h2"/></svg></div><div><b>Plans</b><span>Weekly · Bi-weekly · Monthly · One-time</span></div></div>
-      </div>
+    <div class="cinfo rv">
+      <div class="item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h2l1.5 4-2 1.2a11 11 0 0 0 5 5l1.2-2 4 1.5v2a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3Z"/></svg></div><div><b>Call or text</b><a href="tel:5593175916">559-317-5916</a></div></div>
+      <div class="item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></div><div><b>Email</b><a href="mailto:hello@squeakycleanbins.com">hello@squeakycleanbins.com</a></div></div>
+      <div class="item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><b>Service area</b><span>Fresno, Clovis &amp; the Central Valley</span></div></div>
+      <div class="item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div><div><b>Hours</b><span>Mon–Fri 8a–7p · Sat 10a–4p · Sun closed</span></div></div>
     </div>
   </div>
 </section>
 
-<footer class="site-foot">
+<footer class="foot">
   <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-about"><div class="foot-brand"><img src="assets/logo-trans.png" alt="Squeaky Clean Garbage Bin"></div>
-        <p>Curbside garbage bin cleaning, sanitizing &amp; pressure washing for Fresno, Clovis and the surrounding Central Valley.</p></div>
+    <div class="foot-top">
+      <div><img class="flogo" src="assets/logo-trans.png" alt="Squeaky Clean Garbage Bin"><p class="blurb">Curbside trash bin cleaning, sanitizing &amp; pressure washing for Fresno, Clovis and the Central Valley.</p></div>
       <div><h4>Pages</h4><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
       <div><h4>Services</h4><a href="services.html">Bin Cleaning</a><a href="services.html">Sanitizing</a><a href="services.html">Pressure Washing</a><a href="services.html">Deodorizing</a></div>
-      <div><h4>Get in touch</h4><a href="tel:5593175916"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h2l1.5 4-2 1.2a11 11 0 0 0 5 5l1.2-2 4 1.5v2a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3Z"/></svg></span> 559-317-5916</a><a href="mailto:hello@squeakycleanbins.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span> hello@squeakycleanbins.com</a><a href="#"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span> Fresno &amp; Clovis, CA</a></div>
+      <div><h4>Get in touch</h4><a href="tel:5593175916">📞 559-317-5916</a><a href="mailto:hello@squeakycleanbins.com">✉️ hello@squeakycleanbins.com</a><a href="#">📍 Fresno &amp; Clovis, CA</a></div>
     </div>
-    <div class="foot-bottom"><span>© <span id="year">2026</span> Squeaky Clean Garbage Bin. All rights reserved.</span><span>Licensed · Insured · EPA-conscious</span></div>
+    <div class="foot-bot"><span>© <span id="yr">2026</span> Squeaky Clean Garbage Bin. All rights reserved.</span><span>Licensed · Insured · EPA-conscious</span></div>
   </div>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>
