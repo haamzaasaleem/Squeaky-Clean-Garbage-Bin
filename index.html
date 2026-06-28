@@ -133,30 +133,55 @@
   </div>
 </section>
 
-<!-- WHY IT MATTERS -->
-<section class="sec alt">
+<!-- INTERACTIVE: DRAG TO CLEAN -->
+<section class="sec alt cleandemo">
   <div class="wrap">
-    <div class="sec-head center rv"><span class="eyebrow">Why It Matters</span><h2>A dirty bin isn't just unpleasant</h2><p>Left uncleaned, your cans become a health and pest problem. Here's what regular service prevents.</p></div>
-    <div class="impact">
-      <div class="impact-card rv">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="6"/><path d="M12 6V3M12 21v-3M6 12H3M21 12h-3M7.7 7.7 5.6 5.6M18.4 18.4l-2.1-2.1"/></svg></div>
-        <b>Bacteria &amp; mold</b>
-        <p>Food residue grows E. coli, salmonella and mold in days — especially in valley heat.</p>
-      </div>
-      <div class="impact-card rv">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 6 7M16 3l2 4M4 7h16l-1.5 12a2 2 0 0 1-2 1.8H7.5a2 2 0 0 1-2-1.8L4 7Z"/><path d="M10 11v5M14 11v5"/></svg></div>
-        <b>Flies &amp; pests</b>
-        <p>Maggots, roaches and rodents are drawn to the buildup caked on the inside of cans.</p>
-      </div>
-      <div class="impact-card rv">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10Z"/></svg></div>
-        <b>Lingering odor</b>
-        <p>That smell follows your cans into the garage and drifts across the yard on hot days.</p>
-      </div>
-      <div class="impact-card rv">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg></div>
-        <b>We fix all of it</b>
-        <p>200°+ water and sanitizer wipe it out in one visit — then we keep it that way.</p>
+    <div class="sec-head center rv"><span class="eyebrow">See It In Action</span><h2>Drag across the bin to clean it</h2></div>
+    <div class="demo-stage rv" id="demoStage">
+      <div class="demo-scene">
+        <!-- dirty layer (revealed -> wiped away) -->
+        <div class="layer dirty" id="dirtyLayer">
+          <svg viewBox="0 0 320 340" class="binsvg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="60" y="70" width="200" height="40" rx="12" fill="#6e6452"/>
+            <rect x="138" y="46" width="44" height="30" rx="8" fill="#5c5444"/>
+            <path d="M72 110h176l-18 210a16 16 0 0 1-16 14.5H106A16 16 0 0 1 90 320L72 110Z" fill="#7c7460"/>
+            <path d="M110 140v160M160 140v165M210 140l-4 160" stroke="#5f5848" stroke-width="9" opacity=".5" stroke-linecap="round"/>
+            <!-- grime splotches -->
+            <g fill="#4f4327" opacity=".75">
+              <ellipse cx="120" cy="200" rx="22" ry="16"/><ellipse cx="190" cy="240" rx="26" ry="18"/>
+              <ellipse cx="150" cy="290" rx="30" ry="16"/><ellipse cx="200" cy="170" rx="14" ry="11"/>
+              <ellipse cx="105" cy="260" rx="15" ry="12"/>
+            </g>
+            <g fill="#3f6b1c" opacity=".55"><circle cx="135" cy="225" r="6"/><circle cx="175" cy="205" r="5"/><circle cx="205" cy="285" r="7"/><circle cx="115" cy="300" r="5"/></g>
+            <!-- flies -->
+            <g class="flies" stroke="#2b2b2b" stroke-width="2.5" stroke-linecap="round">
+              <g class="fly f1"><path d="M0 0l5 -4M0 0l5 4"/><circle r="2.4" fill="#2b2b2b" stroke="none"/></g>
+              <g class="fly f2"><path d="M0 0l5 -4M0 0l5 4"/><circle r="2.4" fill="#2b2b2b" stroke="none"/></g>
+              <g class="fly f3"><path d="M0 0l5 -4M0 0l5 4"/><circle r="2.4" fill="#2b2b2b" stroke="none"/></g>
+            </g>
+          </svg>
+          <div class="stink s1">~</div><div class="stink s2">~</div><div class="stink s3">~</div>
+        </div>
+        <!-- clean layer (underneath) -->
+        <div class="layer clean">
+          <svg viewBox="0 0 320 340" class="binsvg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="60" y="70" width="200" height="40" rx="12" fill="#3a5f22"/>
+            <rect x="138" y="46" width="44" height="30" rx="8" fill="#2a4718"/>
+            <path d="M72 110h176l-18 210a16 16 0 0 1-16 14.5H106A16 16 0 0 1 90 320L72 110Z" fill="#5c9a30"/>
+            <path d="M72 110h176l-3 36H75l-3-36Z" fill="#6fb03c"/>
+            <path d="M110 150v150M160 150v155M210 150l-4 150" stroke="#4e7d2e" stroke-width="9" opacity=".55" stroke-linecap="round"/>
+            <g class="sparkle"><path d="M205 150l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#fff"/><path d="M120 185l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#fff"/></g>
+          </svg>
+        </div>
+        <!-- wipe cursor hint -->
+        <div class="wipe-hint" id="wipeHint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h13M11 7l5 5-5 5"/></svg>
+          drag to clean
+        </div>
+        <div class="demo-done" id="demoDone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9 17.5 20 6.5"/></svg>
+          Spotless — that's one visit
+        </div>
       </div>
     </div>
   </div>
